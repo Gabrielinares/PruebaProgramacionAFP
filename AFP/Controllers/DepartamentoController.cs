@@ -51,7 +51,7 @@ namespace API.Controllers
         }
 
         [HttpGet("get/{id}", Name = "GetDepartamento")]
-        public IActionResult Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
             try
             {
@@ -61,7 +61,14 @@ namespace API.Controllers
                 {
                     return BadRequest();
                 }
+
                 var departamento = _departamentoService.GetDepartamentoId(id);
+
+                if (departamento.Count == 0)
+                {
+                    return NotFound();
+                }
+
                 return Ok(departamento);
             }
             catch

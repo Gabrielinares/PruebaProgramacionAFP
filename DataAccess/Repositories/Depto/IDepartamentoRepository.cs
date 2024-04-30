@@ -17,6 +17,6 @@ namespace DataAccess.Repositories.Depto
 
         Task<Departamento> DeleteDepartamento(int id);
 
-        Departamento GetDepartamentoId(int id);
+        List<Departamento> GetDepartamentoId(int id);
     }
 }

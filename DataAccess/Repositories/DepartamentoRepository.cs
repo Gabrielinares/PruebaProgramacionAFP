@@ -81,13 +81,13 @@ namespace layer.access.Repositories
             }
         }
 
-        public Departamento GetDepartamentoId(int id)
+        public List<Departamento> GetDepartamentoId(int id)
         {
             try
             {
                 return _dbcontext.Departamentos.FromSqlRaw("EXEC SP_OBTENER_DEPARTAMENTO_ID @p0", parameters: new[] {id.ToString()})
                         .AsEnumerable()
-                        .FirstOrDefault();
+                        .ToList();
             }
             catch
             {
