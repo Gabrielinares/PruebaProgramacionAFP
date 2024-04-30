@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "PruebaProgramacionAFP": {
+    "AFP": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
@@ -8,7 +8,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:7103;http://localhost:5176"
+      "applicationUrl": "https://localhost:7213;http://localhost:5032"
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -34,8 +34,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:27949",
-      "sslPort": 44321
+      "applicationUrl": "http://localhost:7896",
+      "sslPort": 44317
     }
   }
 }
