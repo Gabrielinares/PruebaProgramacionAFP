@@ -33,7 +33,7 @@ namespace API.Controllers
         {
             try
             {
-                var newDepartamento = await _empresaService.AddEmpresa(empresa);
+                var newEmpresa = await _empresaService.AddEmpresa(empresa);
                 return StatusCode(201, "Creado exitosamente");
             }
             catch
@@ -43,7 +43,7 @@ namespace API.Controllers
         }
 
         [HttpGet("get/{id}", Name = "GetEmpresa")]
-        public IActionResult Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
             try
             {
