@@ -60,7 +60,7 @@ namespace Business.Services
                 throw;
             }
         }
-        public Departamento GetDepartamentoId(int id)
+        public List<Departamento> GetDepartamentoId(int id)
         {
             try
             {

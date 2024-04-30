@@ -17,6 +17,6 @@ namespace Business.Services.Depto
 
         Task<Departamento> EliminarDepartamento(int id);
 
-        Departamento GetDepartamentoId(int id);
+        List<Departamento> GetDepartamentoId(int id);
     }
 }
